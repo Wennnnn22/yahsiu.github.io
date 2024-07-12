@@ -1,0 +1,163 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container Styles */
+#container {
+    display: flex;
+    min-height: 100vh;
+    align-items: stretch;
+}
+
+/* Left Panel Styles */
+#left-panel {
+    width: 25%;
+    background: #f8e3e3;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: left;
+}
+
+.profile-section {
+    text-align: center;
+}
+
+#profile-photo {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#basic-info p {
+    margin: 10px 0;
+}
+
+#toggle-details {
+    background-color: #FFB6C1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 5px #FF69B4;
+    transition: all 0.2s;
+}
+
+#toggle-details:active {
+    box-shadow: 0 2px #FF69B4;
+    transform: translateY(4px);
+}
+
+#extra-info {
+    margin-top: 10px;
+}
+
+/* Main Content Styles */
+#main-content {
+    width: 75%;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f4f4f4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#content {
+    width: 100%;
+    max-width: 800px;
+}
+
+.record {
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.record-content {
+    display: flex;
+    align-items: center;
+}
+
+.record-photo {
+    width: 30%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+h1#welcome {
+    font-size: 2.5em;
+    color: #FFB6C1;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav-buttons button {
+    width: 90%;
+    background-color: #FFB6C1;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 5px #FF69B4;
+    transition: all 0.2s;
+}
+
+.nav-buttons button:hover {
+    background-color: #FF69B4;
+    box-shadow: 0 3px #FFB6C1;
+    transform: translateY(2px);
+}
+
+.nav-buttons button:active {
+    box-shadow: 0 1px #FFB6C1;
+    transform: translateY(4px);
+}
+
+.nav-buttons .circle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    border: 2px solid #FFB6C1;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.nav-buttons button.active .circle {
+    background-color: #FFB6C1;
+}

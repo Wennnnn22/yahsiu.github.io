@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="left-panel">
+            <div class="profile-section">
+                <img src="me.jpg" alt="Your Photo" id="profile-photo">
+                <h2>YU, YA-HSIU</h2>
+                <div id="basic-info">
+                    <p><strong>School:</strong> NTUT</p>
+                    <p><strong>Email:</strong> <a href="mailto:wendy82041@gmail.com">wendy82041@gmail.com</a></p>
+                    <p><strong>Location:</strong> Taiwan, Taipei</p>
+                    <button id="toggle-details">Show More</button>
+                    <div id="extra-info" style="display: none;">
+                        <p><strong>Personalities:</strong> Cheerful and full of curiosity.</p>
+                        <p><strong>Favorite Things:</strong> Watching Movies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="showContent('personal')">Personal</button>
+                <button onclick="showContent('education')">Education</button>
+                <button onclick="sendEmail()">Contact Information</button>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1 id="welcome">Welcome!</h1>
+            <div class="record">
+                <h3>Personal Information</h3>
+                <p><strong>Address:</strong> Taiwan, Taipei</p>
+                <p><strong>Email:</strong> <a href="mailto:wendy82041@gmail.com">wendy82041@gmail.com</a></p>
+            </div>
+            <div class="record">
+                <h3>Education</h3>
+                <div class="record-content">
+                    <p>NTUT, Taipei</p>
+                </div>
+            </div>
+            <div class="record">
+                <h3>Travel Records</h3>
+                <div class="record-content">
+                    <img src="tainan.jpg" alt="Travel Photo" class="record-photo">
+                    <p>A trip to Tainan.</p>
+                </div>
+            </div>
+            <div class="record">
+                <h3>Food Records</h3>
+                <div class="record-content">
+                    <img src="cake.jpg" alt="Food Photo" class="record-photo">
+                    <p>Lazing on a Sunday afternoon.</p>
+                </div>
+            </div>
+            <div class="record">
+                <h3>Contact Information</h3>
+                <div class="record-content">
+                    <p>Click to send an email to me :  <a href="mailto:wendy82041@gmail.com">wendy82041@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
