@@ -25,6 +25,9 @@ body {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     text-align: left;
+    min-height: 100vh;
+    overflow-y: auto;
+
 }
 
 .profile-section {
@@ -85,6 +88,8 @@ body {
 
 .content-section {
     display: none;
+    width: 100%;
+    max-width: 800px;
 }
 
 .content-section.active {
@@ -103,7 +108,7 @@ body {
 
 .record-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .record-photo {
@@ -116,12 +121,20 @@ body {
 h1, h2, h3 {
     color: #333;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 h1#welcome {
     font-size: 2.5em;
     color: #FFB6C1;
     margin-bottom: 20px;
+}
+
+h3.section-title {
+    margin-bottom: 15px;
+    color: #FF69B4;
+    text-align: left;
+    font-size: 1.8em;
 }
 
 p {
