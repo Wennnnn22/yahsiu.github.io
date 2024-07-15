@@ -40,7 +40,9 @@ body {
 
 #basic-info p {
     margin: 10px 0;
+    text-align: left;
 }
+
 
 #toggle-details {
     background-color: #FFB6C1;
@@ -60,6 +62,7 @@ body {
 
 #extra-info {
     margin-top: 10px;
+    text-align: left;
 }
 
 /* Main Content Styles */
@@ -78,6 +81,14 @@ body {
 #content {
     width: 100%;
     max-width: 800px;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
 }
 
 .record {
@@ -131,7 +142,7 @@ p {
     border: none;
     padding: 15px 30px;
     margin: 10px 0;
-    cursor: pointer;
+    cursor: pointer; 
     border-radius: 20px;
     box-shadow: 0 5px #FF69B4;
     transition: all 0.2s;

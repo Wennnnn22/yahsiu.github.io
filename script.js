@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetchContent('About me');
-
     const toggleDetailsButton = document.getElementById('toggle-details');
     const extraInfo = document.getElementById('extra-info');
+
     toggleDetailsButton.addEventListener('click', function() {
-        if (extraInfo.style.display === 'none') {
+        if (extraInfo.style.display === 'none' || extraInfo.style.display === '') {
             extraInfo.style.display = 'block';
             toggleDetailsButton.textContent = 'Show Less';
         } else {
@@ -19,23 +18,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.classList.remove('active');
             });
             this.classList.add('active');
-            const section = this.innerText.trim().toLowerCase();
+            const section = this.innerText.trim().toLowerCase().replace(' ', '-');
             showContent(section);
-            scrollToSection(section);
         });
     });
+
+    // 初始顯示個人信息
+    showContent('personal');
 });
 
-function fetchContent(section) {
-
-    document.getElementById('content').innerHTML = `<h1>${section.charAt(0).toUpperCase() + section.slice(1)}</h1><p>${content[section]}</p>`;
+function showContent(section) {
+    document.querySelectorAll('.content-section').forEach(section => {
+        section.classList.remove('active');
+    });
+    document.getElementById(section).classList.add('active');
+    loadTxtContent(section + '.txt', section + '-content');
 }
 
-function scrollToSection(section) {
-    const element = document.getElementById(section);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+function loadTxtContent(file, elementId) {
+    fetch(file)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById(elementId).innerText = data;
+        })
+        .catch(error => console.error('Error loading TXT file:', error));
 }
 
 function sendEmail() {

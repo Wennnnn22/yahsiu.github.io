@@ -18,50 +18,53 @@
                     <p><strong>Location:</strong> Taiwan, Taipei</p>
                     <button id="toggle-details">Show More</button>
                     <div id="extra-info" style="display: none;">
-                        <p><strong>Personalities:</strong> Cheerful and full of curiosity.</p>
+                        <p><strong>Personalities:</strong> Full of curiosity.</p>
                         <p><strong>Favorite Things:</strong> Watching Movies.</p>
                     </div>
                 </div>
             </div>
             <div class="nav-buttons">
-                <button onclick="showContent('personal')">Personal</button>
-                <button onclick="showContent('education')">Education</button>
+                <button onclick="showContent('Person Information')">Personal</button>
+                <button onclick="showContent('Travel')">Travel</button>
+                <button onclick="showContent('Food')">Food</button>
+                <button onclick="showContent('Other Shares ')">Other</button>
                 <button onclick="sendEmail()">Contact Information</button>
             </div>
         </div>
         <div id="main-content">
             <h1 id="welcome">Welcome!</h1>
-            <div class="record">
-                <h3>Personal Information</h3>
-                <p><strong>Address:</strong> Taiwan, Taipei</p>
-                <p><strong>Email:</strong> <a href="mailto:wendy82041@gmail.com">wendy82041@gmail.com</a></p>
-            </div>
-            <div class="record">
-                <h3>Education</h3>
-                <div class="record-content">
-                    <p>NTUT, Taipei</p>
+            <section id="personal" class="content-section">
+                <div class="record">
+                    <h3>Personal Information</h3>
+                    <div id="personal-content" class="record-content"></div>
                 </div>
-            </div>
-            <div class="record">
-                <h3>Travel Records</h3>
-                <div class="record-content">
-                    <img src="tainan.jpg" alt="Travel Photo" class="record-photo">
-                    <p>A trip to Tainan.</p>
+            </section>
+            <section id="travel" class="content-section">
+                <div class="record">
+                    <h3>Travel</h3>
+                    <div id="travel-content" class="record-content"></div>
                 </div>
-            </div>
-            <div class="record">
-                <h3>Food Records</h3>
-                <div class="record-content">
-                    <img src="cake.jpg" alt="Food Photo" class="record-photo">
-                    <p>Lazing on a Sunday afternoon.</p>
+            </section>
+            <section id="food" class="content-section">
+                <div class="record">
+                    <h3>Food</h3>
+                    <div id="food-content" class="record-content"></div>
                 </div>
-            </div>
-            <div class="record">
-                <h3>Contact Information</h3>
-                <div class="record-content">
-                    <p>Click to send an email to me :  <a href="mailto:wendy82041@gmail.com">wendy82041@gmail.com</a></p>
+            </section>
+            <section id="other" class="content-section">
+                <div class="record">
+                    <h3>Food</h3>
+                    <div id="Other-content" class="record-content"></div>
                 </div>
-            </div>
+            </section>
+            <section id="contact" class="content-section">
+                <div class="record">
+                    <h3>Contact Information</h3>
+                    <div id="contact-content" class="record-content">
+                        <p>Click to send an email to me: <a href="mailto:wendy82041@gmail.com">wendy82041@gmail.com</a></p>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
     <script src="script.js"></script>
