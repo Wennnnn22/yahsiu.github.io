@@ -105,18 +105,18 @@ body {
     margin-bottom: 20px;
 }
 
+.record-photo {
+    flex: 1;
+    width: 200px; /* 你可以調整這個寬度以符合你的需要 */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
 .record-content {
     flex: 2;
     display: flex;
     flex-direction: column;
-}
-
-.record-photo {
-    flex: 1;
-    width: 100%;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
 }
 
 h1, h2, h3 {
@@ -167,4 +167,3 @@ p {
     box-shadow: 0 3px #FFB6C1;
     transform: translateY(2px);
 }
-
